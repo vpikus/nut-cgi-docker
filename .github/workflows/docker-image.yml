@@ -20,7 +20,7 @@ jobs:
       with:
         images: ghcr.io/${{ github.actor }}/webnut
         tags: |
-          type=raw,value={{date 'YYYYMMDD-hhmmss'}}
+          type=raw,value={{date 'YYYYMMDD'}}
     - name: Log in to the Container registry
       if: github.event_name != 'pull_request'
       uses: docker/login-action@v3
